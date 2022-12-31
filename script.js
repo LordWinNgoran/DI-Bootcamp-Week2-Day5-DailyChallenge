@@ -1,7 +1,7 @@
 /****************************Daily Challenge: 99 Bottles Of Beer***************** */
 
 /**
- * @author: Kouadio Jean Cyrille
+ * @author: N'GORAN Kouadio Jean Cyrille
  * @description: Have you heard the infamous song “99 Bottles of Beer?”
  * In this exercise you need to console.log the lyrics of our own 99 Bottles of Beer song.
  * @param: initialBottles:Number
@@ -11,12 +11,16 @@
 
 
 let initialBottles = 99;
-
+// Modification I change alerte for console.log 
 alert("We start the song at " + initialBottles + " bottles");
 
 for (let countBottle = 0; countBottle < initialBottles; countBottle++) {
       //1 Prompt the user for a number to begin counting down bottles.
       let userNumber = prompt("How many bootles do you want ?");
+      while(userNumber>initialBottles){
+           alert("Your number is great than our stock, We have "+initialBottles);
+           userNumber = prompt("How many bootles do you want ?");
+      }
       // Check if user choice is great or low than 1
       if (userNumber == 1) {
             //Here we show a message for 1 bottle
